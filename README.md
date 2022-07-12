@@ -1,3 +1,3 @@
 # DSA-CPP
 
-Implemention of common data structures in algorithms in c ++
+Implemention of common data structures and algorithms in c ++
