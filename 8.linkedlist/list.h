@@ -96,9 +96,9 @@ public:
     {
         Node *temp = tail;
         Node *tempH = head;
-        while (tempH != NULL)
+        for (Node *tempH; tempH != NULL; tempH->next)
         {
-            tempH = tempH->next;
         }
+        cout << tempH->getData() << endl;
     }
 };
