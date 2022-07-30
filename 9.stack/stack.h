@@ -6,10 +6,10 @@ class Node
 {
 public:
     T data;
-    Node *next;
-    Node(T data)
+    Node<T> *next;
+    Node(T d)
     {
-        data = data;
+        data = d;
         next = NULL;
     }
 };
@@ -17,17 +17,36 @@ public:
 template <typename T>
 class Stack
 {
-public:
-    Node *head;
 
+    Node<T> *head;
+
+public:
+    Stack()
+    {
+        head = NULL;
+    }
     void push(T data)
     {
-        T temp = new Node(data);
+        Node<T> *temp = new Node<T>(data);
         temp->next = head;
-        temp = head;
+        head = temp;
+    }
+    bool empty()
+    {
+        return head == NULL;
     }
     T top()
     {
         return head->data;
+    }
+
+    void pop()
+    {
+        if (head != NULL)
+        {
+            Node<T> *temp = head;
+            head = head->next;
+            delete temp;
+        }
     }
 };
