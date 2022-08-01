@@ -1,16 +1,19 @@
 #include <iostream>
+#include <vector>
 #include "stack.h"
+#include "vectorStack.h"
 using namespace std;
 int main()
 {
     Stack<int> s;
+    VectorStack<int> v;
 
-    s.push(10);
-    s.push(20);
-    cout << s.empty() << endl;
-    cout << s.top() << endl;
-    s.pop();
-    cout << s.top() << endl;
+    v.push(10);
+    v.push(20);
+    cout << v.empty() << endl;
+    cout << v.top() << endl;
+    v.pop();
+    cout << v.top() << endl;
 
     return 0;
 }
